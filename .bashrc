@@ -7,6 +7,9 @@ export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+# Alias vi to nvim
+alias vi=nvim
+
 # Load machine-specific bashrc
 [ -f $HOME/.bashrc_extras ] && . $HOME/.bashrc_extras
 
