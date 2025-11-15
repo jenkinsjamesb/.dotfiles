@@ -45,7 +45,7 @@ vim.o.shiftwidth = 4 -- Number of spaces for each indentation
 vim.o.expandtab = true -- Convert tabs to spaces
 vim.o.smartindent = true -- Automatically indent new lines
 vim.o.wrap = false -- Disable line wrapping
-vim.o.cursorline = true -- Highlight the current line
+--vim.o.cursorline = true -- Highlight the current line
 
 --vim.cmd('syntax on')
 --vim.cmd('filetype plugin indent on')
