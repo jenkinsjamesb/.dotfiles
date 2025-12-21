@@ -1,0 +1,15 @@
+- widget: DefaultConfig
+
+- widget: ExternalProgram
+  command: i3status
+
+#- widget: ExternalProgram
+#  command: /home/brad/.config/statusbar/locks.sh
+
+- widget: ExternalProgram
+  command: /home/brad/.config/statusbar/weather.sh
+
+- widget: DateTime
+  format: "Mon 02 Jan - 15:04:05 MST"
+
+
