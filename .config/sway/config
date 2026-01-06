@@ -30,7 +30,7 @@ set $menu wmenu-run
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 output * bg /home/brad/Desktop/bg.png fill
-output DP-1 mode 2560x1440@59.951Hz position 0,0
+output DP-1 mode 2560x1440@59.951Hz position 0 0
 
 ### Idle configuration
 #
@@ -215,6 +215,10 @@ bindsym $mod+r mode "resize"
 #
 
 #bindsym Num_Lock exec /home/brad/.config/statusbar/numlock.sh
+
+# Bind mod+scroll to volume controls
+bindsym --locked --whole-window $mod+button4 exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked --whole-window $mod+button5 exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
 
 #
 # Status Bar:
