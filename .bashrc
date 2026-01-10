@@ -1,5 +1,5 @@
 # Set prompt
-export PS1="\[\e[1;31m\]\u\[\e[1;30m\]@\[\e[1;32m\]\H\[\e[1;30m\]:\[\e[1;34m\]\w\[\e[0m\]\n\$ \[\e[0m\]"
+export PS1="\[\e[1;31m\]\u\[\e[1;90m\]@\[\e[1;32m\]\H\[\e[1;90m\]:\[\e[1;34m\]\w\[\e[0m\]\n\$ "
 
 # Set unlimited history
 export HISTFILESIZE=
