@@ -6,6 +6,7 @@ local core = require "core"
 local keymap = require "core.keymap"
 local config = require "core.config"
 local style = require "core.style"
+local lspconfig = require "plugins.lsp.config"
 
 ------------------------------ Themes ----------------------------------------
 
@@ -57,6 +58,9 @@ local style = require "core.style"
 
 -- disable plugin detectindent, otherwise it is enabled by default:
 -- config.plugins.detectindent = false
+
+-- set up typescript-language-server with default configuration (enough for most people)
+lspconfig.gopls.setup()
 
 ---------------------------- Miscellaneous -------------------------------------
 
