@@ -1,1 +1,0 @@
-lite-xl-snippets/snippets.lua

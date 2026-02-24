@@ -1,0 +1,1 @@
+lite-xl-plugins/plugins/language_autohotkey_v1.lua
