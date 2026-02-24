@@ -1,0 +1,15 @@
+[submodule ".config/lite-xl/libraries/widget"]
+	path = .config/lite-xl/libraries/widget
+	url = https://github.com/lite-xl/lite-xl-widgets
+[submodule ".config/lite-xl/plugins/lsp"]
+	path = .config/lite-xl/plugins/lsp
+	url = https://github.com/lite-xl/lite-xl-lsp
+[submodule ".config/lite-xl/plugins/lite-xl-snippets"]
+	path = .config/lite-xl/plugins/lite-xl-snippets
+	url = https://github.com/vqns/lite-xl-snippets
+[submodule ".config/lite-xl/plugins/lintplus"]
+	path = .config/lite-xl/plugins/lintplus
+	url = https://github.com/liquidev/lintplus
+[submodule ".config/lite-xl/plugins/lite-xl-plugins"]
+	path = .config/lite-xl/plugins/lite-xl-plugins
+	url = https://github.com/lite-xl/lite-xl-plugins

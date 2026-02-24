@@ -1,0 +1,1 @@
+lite-xl-plugins/plugins/open_ext.lua

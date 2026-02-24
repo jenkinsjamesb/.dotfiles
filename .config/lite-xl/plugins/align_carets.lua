@@ -1,0 +1,1 @@
+lite-xl-plugins/plugins/align_carets.lua
