@@ -44,7 +44,7 @@ return {
       }
     },
     ["indent_size"] = 4,
-    ["max_tabs"] = 16,
+    ["max_tabs"] = 32,
     ["plugins"] = {
       ["centerdoc"] = {
         ["enabled"] = false,
