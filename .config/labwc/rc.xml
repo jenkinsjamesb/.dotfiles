@@ -1,0 +1,43 @@
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+
+  <theme>
+    <name>Clearlooks-3.4</name>
+    <cornerRadius>8</cornerRadius>
+    <font name="sans" size="10" />
+  </theme>
+
+  <keyboard>
+
+    <default />
+
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="weston-terminal" />
+    </keybind>
+    
+  </keyboard>
+
+  <mouse>
+    <default />
+
+    <!-- Volume up on Super+ScrollUp -->
+    <context name="Desktop">
+      <mousebind button="W-Up" action="Scroll">
+        <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ +5%" />
+      </mousebind>
+    </context>
+    
+    <!-- Volume down on Super+Scrolldown -->
+    <context name="Desktop">
+      <mousebind button="W-Down" action="Scroll">
+        <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ -5%" />
+      </mousebind>
+    </context>
+  </mouse>
+
+</labwc_config>
