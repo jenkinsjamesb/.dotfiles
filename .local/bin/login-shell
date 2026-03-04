@@ -1,0 +1,24 @@
+#!/bin/sh
+
+prompt_for_action() {
+    prompt="Enter an option 0-$(( $#-1 )):"
+    printf "%s\n\n" "${prompt}"
+    i=0
+    for opt in "$@"; do printf "%d) %s\n" $i "$opt" && i=$(($i+1)) && shift; done
+    printf "\n%s " "${prompt}"
+}
+
+trap '' INT
+
+while true; do
+    prompt_for_action "Exit" "Shell" "Start labwc"
+    read -r choice
+    case $choice in
+        0)
+            exit 0;;
+        1)
+            sh;;
+        2)
+            labwc;;
+    esac
+done
