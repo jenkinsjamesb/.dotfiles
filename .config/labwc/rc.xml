@@ -25,16 +25,14 @@
   <mouse>
     <default />
 
-    <!-- Volume up on Super+ScrollUp -->
-    <context name="Desktop">
-      <mousebind button="W-Up" action="Scroll">
+    <context name="All">
+      <!-- Volume up on Super+ScrollUp -->
+      <mousebind direction="W-Up" action="Scroll">
         <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ +5%" />
       </mousebind>
-    </context>
-    
-    <!-- Volume down on Super+Scrolldown -->
-    <context name="Desktop">
-      <mousebind button="W-Down" action="Scroll">
+   
+      <!-- Volume down on Super+Scrolldown -->
+      <mousebind direction="W-Down" action="Scroll">
         <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ -5%" />
       </mousebind>
     </context>
