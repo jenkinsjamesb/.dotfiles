@@ -1,0 +1,4 @@
+# Set timeout for display(s) blanking
+swayidle -w \
+	timeout 300 'wlopm --off \*' \
+	resume 'wlopm --on \*' &
