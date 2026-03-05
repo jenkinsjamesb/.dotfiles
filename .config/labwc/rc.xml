@@ -19,6 +19,10 @@
     <keybind key="W-Return">
       <action name="Execute" command="foot" />
     </keybind>
+
+    <keybind key="W-l">
+      <action name="Execute" command="swaylock" />
+    </keybind>
     
   </keyboard>
 
