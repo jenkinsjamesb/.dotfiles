@@ -7,6 +7,5 @@ export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-alias su="tmux detach && su"
-
-[ -n $(command -v tmux) ] && [ -z "$TMUX" ] && exec tmux new-session -A -s main
+# If non-login and tmux installed and not attached, start/attach to tmux
+[[ $0 != -* ]] && [ -n $(command -v tmux) ] && [ -z "$TMUX" ] && exec tmux new-session -A -s main

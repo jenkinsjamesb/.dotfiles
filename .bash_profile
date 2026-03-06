@@ -5,5 +5,3 @@ if [ -n "$BASH_VERSION" ]; then
     . "$HOME/.bashrc"
     fi
 fi
-
-[ -f $HOME/.bash_profile_extras ] && . $HOME/.bash_profile_extras
