@@ -8,4 +8,6 @@ export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # If non-login and tmux installed and not attached, start/attach to tmux
-[[ $0 != -* ]] && [ -n $(command -v tmux) ] && [ -z "$TMUX" ] && exec tmux new-session -A -s main
+[ -z "$SSH_TTY" ] && [[ $- == *i* ]] && [[ $0 != -* ]] && [ -n $(command -v tmux) ] && [ -z "$TMUX" ] && exec tmux new-session -A -s main
+
+alias zed="env -u WAYLAND_DISPLAY $HOME/.local/bin/zed"
