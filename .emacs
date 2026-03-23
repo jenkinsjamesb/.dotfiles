@@ -11,13 +11,16 @@
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(gofmt-show-errors 'echo)
+ '(neo-show-hidden-files t)
  '(neo-window-width 35)
  '(org-preview-html-viewer 'eww)
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
      ("melpa" . "https://melpa.org/packages/")))
- '(package-selected-packages '(go-mode neotree org-preview-html sr-speedbar))
+ '(package-selected-packages
+   '(dockerfile-mode go-mode markdown-mode neotree org-preview-html
+		     sr-speedbar systemd))
  '(scroll-bar-mode nil)
  '(sr-speedbar-auto-refresh nil)
  '(sr-speedbar-right-side nil))
