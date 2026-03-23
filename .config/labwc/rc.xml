@@ -9,6 +9,7 @@
     <name>Clearlooks-3.4</name>
     <cornerRadius>8</cornerRadius>
     <font name="sans" size="10" />
+    <keepBorder>no</keepBorder>
   </theme>
 
   <keyboard>
@@ -22,6 +23,22 @@
 
     <keybind key="W-l">
       <action name="Execute" command="swaylock" />
+    </keybind>
+
+    <keybind key="W-Space">
+      <action name="ShowMenu" menu="root-menu" />
+    </keybind>
+
+    <keybind key="W-S-d">
+      <action name="ToggleDecorations" />
+    </keybind>
+
+    <keybind key="W-S-f">
+      <action name="ToggleFullscreen" />
+    </keybind>
+
+    <keybind key="W-S-q">
+      <action name="Kill" />
     </keybind>
     
   </keyboard>
