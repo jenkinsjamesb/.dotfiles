@@ -5,6 +5,11 @@
 
 <labwc_config>
 
+  <core>
+    <adaptiveSync>yes</adaptiveSync>
+    <allowTearing>no</allowTearing>
+  </core>
+
   <theme>
     <name>Clearlooks-3.4</name>
     <cornerRadius>8</cornerRadius>
