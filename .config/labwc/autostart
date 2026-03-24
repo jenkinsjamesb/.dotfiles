@@ -3,3 +3,4 @@ swayidle -w \
 	timeout 300 'wlopm --off \*' \
 	resume 'wlopm --on \*' &
 kanshi &
+waybar &
