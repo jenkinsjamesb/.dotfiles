@@ -19,8 +19,8 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(dockerfile-mode go-mode markdown-mode neotree org-preview-html
-		     sr-speedbar systemd))
+   '(dockerfile-mode go-mode htmlize markdown-mode neotree
+		     org-preview-html sr-speedbar systemd))
  '(scroll-bar-mode nil)
  '(sr-speedbar-auto-refresh nil)
  '(sr-speedbar-right-side nil))
