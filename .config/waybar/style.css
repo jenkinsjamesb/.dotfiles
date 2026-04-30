@@ -76,14 +76,40 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
+#clock {
+    background-color: #8611f5;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+#network {
+    background-color: #aa3215;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+#cpu {
+    background-color: #aaaa10;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+#memory {
+    background-color: #26a65b;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+#battery {
+    background-color: #11119a;
+    color: #ffffff;    
+    padding: 0 5px;
+}
+
 #battery,
-#cpu,
-#memory,
 #disk,
 #temperature,
 #backlight,
-#network,
 #pulseaudio,
 #wireplumber,
 #custom-media,
@@ -112,7 +138,7 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
+/*#clock {
     background-color: #64727D;
 }
 
@@ -131,7 +157,7 @@ button:hover {
         background-color: #ffffff;
         color: #000000;
     }
-}
+}*/
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
@@ -167,14 +193,14 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
+/*#cpu {
     background-color: #2ecc71;
     color: #000000;
 }
 
 #memory {
     background-color: #9b59b6;
-}
+}*/
 
 #disk {
     background-color: #964B00;
@@ -184,9 +210,9 @@ label:focus {
     background-color: #90b1b1;
 }
 
-#network {
+/*#network {
     background-color: #2980b9;
-}
+}*/
 
 #network.disconnected {
     background-color: #f53c3c;
