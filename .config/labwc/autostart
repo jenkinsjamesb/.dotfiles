@@ -4,3 +4,4 @@ swayidle -w \
 	resume 'wlopm --on \*' &
 kanshi &
 waybar &
+swaybg --image /usr/share/weston/pattern.png --mode tile &
