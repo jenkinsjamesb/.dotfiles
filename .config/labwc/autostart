@@ -5,3 +5,4 @@ swayidle -w \
 kanshi &
 waybar &
 swaybg --image /usr/share/weston/pattern.png --mode tile &
+xclock &
