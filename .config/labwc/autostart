@@ -5,4 +5,4 @@ swayidle -w \
 kanshi &
 waybar &
 swaybg --image /usr/share/weston/pattern.png --mode tile &
-xclock &
+xclock -mode cat -chime -tiecolor "#a99cef" -bg "#8a8481" &
