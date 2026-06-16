@@ -59,4 +59,7 @@
     </context>
   </mouse>
 
+  <windowRules>
+    <windowRule identifier="xclock" skipWindowSwitcher="yes" />
+  </windowRules>
 </labwc_config>
