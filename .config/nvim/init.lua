@@ -4,6 +4,10 @@ vim.pack.add {
 	{ src = 'https://github.com/mason-org/mason.nvim' },
 	{ src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
 	{ src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
+
+    { src = "https://github.com/nvim-telescope/telescope-file-browser.nvim" },
+    { src = "https://github.com/nvim-telescope/telescope.nvim" },
+    { src = "https://github.com/nvim-lua/plenary.nvim" },
 }
 
 require('mason').setup()
@@ -50,3 +54,5 @@ vim.o.cursorline = true -- Highlight the current line
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
 
+
+vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
