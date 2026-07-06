@@ -1,22 +1,54 @@
 vim.pack.add {
-	{ src = 'https://github.com/bjarneo/pixel.nvim' },
+	-- Theme that uses terminal colors
+    { src = 'https://github.com/bjarneo/pixel.nvim' },
+
+    -- Native nvim lsp config
 	{ src = 'https://github.com/neovim/nvim-lspconfig' },
-	{ src = 'https://github.com/mason-org/mason.nvim' },
+
+    -- Mason for installing lsps
+    { src = 'https://github.com/mason-org/mason.nvim' },
 	{ src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
 	{ src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
 
+    -- Telescope for the nice file browser
     { src = "https://github.com/nvim-telescope/telescope-file-browser.nvim" },
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
     { src = "https://github.com/nvim-lua/plenary.nvim" },
+
+    -- We like column limits here
+    { src = "https://github.com/lukas-reineke/virt-column.nvim" },
 }
 
+-- TODO: Pull lsp settings into a separate file
 require('mason').setup()
 require('mason-lspconfig').setup()
 require('mason-tool-installer').setup({
 	ensure_installed = {
 		"lua_ls",
 		"stylua",
+        "gopls",
 	}
+})
+
+vim.lsp.config('gopls', {
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = vim.api.nvim_create_augroup("GoLspFormatting", {}),
+      buffer = bufnr,
+      callback = function()
+        -- Organize imports
+        vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+        -- Format
+        vim.lsp.buf.format({ async = false, id = client.id })
+      end,
+    })
+  end,
+  -- Optional: Use gofumpt for stricter formatting
+  settings = {
+    gopls = {
+      gofumpt = true,
+    },
+  },
 })
 
 vim.lsp.config('lua_ls', {
@@ -41,15 +73,30 @@ vim.lsp.config('lua_ls', {
 	},
 })
 
+require("virt-column").setup({
+    char = "│", -- Full-height line
+    highlight = "LineNr",
+})
+
+vim.diagnostic.config({
+  virtual_text = true,     -- Shows errors inline at the end of the line
+  signs = true,            -- Shows icons in the gutter/sign column
+  update_in_insert = true, -- Update errors automatically while typing in Insert Mode
+  underline = true,        -- Underline the error text
+})
+
 vim.cmd.colorscheme("pixel")
 
 vim.o.number = true -- Enable line numbers
+vim.o.relativenumber = true -- Relative numbers
 vim.o.tabstop = 4 -- Number of spaces a tab represents
 vim.o.shiftwidth = 4 -- Number of spaces for each indentation
 vim.o.expandtab = true -- Convert tabs to spaces
 vim.o.smartindent = true -- Automatically indent new lines
-vim.o.wrap = false -- Disable line wrapping
-vim.o.cursorline = true -- Highlight the current line
+vim.o.wrap = true -- Enable line wrapping
+vim.o.colorcolumn = "80"
+--vim.o.cursorline = true -- Highlight the current line
+
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
