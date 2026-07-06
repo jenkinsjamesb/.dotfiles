@@ -97,9 +97,7 @@ vim.o.wrap = true -- Enable line wrapping
 vim.o.colorcolumn = "80"
 --vim.o.cursorline = true -- Highlight the current line
 
-
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
-
 
 vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
