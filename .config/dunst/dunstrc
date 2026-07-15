@@ -1,0 +1,38 @@
+[global]
+    geometry           = "0x0-62-62"
+
+    frame_width        = 1
+
+    markup           = full
+    format           = "<b>%s</b>\n%b"
+    icon_path        = ""
+    icon_position    = left
+    max_icon_size    = 32
+    show_indicators  = false
+    separator_color  = frame
+
+    follow = mouse
+
+    mouse_left_click   = do_action
+    mouse_right_click  = close_current
+    mouse_middle_click = close_current
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
+    timeout = 10
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
+    timeout = 10
+
+[urgency_critical]
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 0
+
+
