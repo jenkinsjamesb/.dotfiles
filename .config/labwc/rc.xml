@@ -25,6 +25,10 @@
       <action name="Execute" command="swaylock" />
     </keybind>
 
+    <keybind key="W-p">
+      <action name="Execute" command="playerctl play-pause" />
+    </keybind>
+
     <keybind key="W-Space">
       <action name="ShowMenu" menu="root-menu" />
     </keybind>
@@ -56,6 +60,7 @@
       <mousebind direction="W-Down" action="Scroll">
         <action name="Execute" command="pactl set-sink-volume \@DEFAULT_SINK@ -5%" />
       </mousebind>
+
     </context>
   </mouse>
 
