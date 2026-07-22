@@ -17,6 +17,9 @@ vim.pack.add({
 
 	-- We like column limits here
 	{ src = "https://github.com/lukas-reineke/virt-column.nvim" },
+
+	-- Git info in gutter
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 
 -- TODO: Pull lsp settings into a separate file
