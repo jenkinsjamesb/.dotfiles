@@ -114,7 +114,7 @@ vim.diagnostic.config({
 })
 
 --vim.cmd.colorscheme("pixel") -- Color theme that uses ANSI colors only
-vim.cmd.colorscheme("moonfly")
+vim.cmd.colorscheme("habamax")
 
 vim.g.mapleader = " "
 vim.o.number = true -- Enable line numbers
@@ -138,4 +138,5 @@ vim.keymap.set(
 	{ desc = "Telescope file browser" }
 )
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope live grep" })
 --vim.keymap.set("n", "<leader>fg", ":Telescope live_grep search_dirs={'%:p:h'}<CR>", { desc = "Telescope live grep" })
