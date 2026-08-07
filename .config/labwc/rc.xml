@@ -18,7 +18,7 @@
 
     <!-- Use a different terminal emulator -->
     <keybind key="W-Return">
-      <action name="Execute" command="kitty" />
+      <action name="Execute" command="ghostty" />
     </keybind>
 
     <keybind key="W-l">
