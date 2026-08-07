@@ -1,6 +1,7 @@
 vim.pack.add({
-	-- Theme that uses terminal colors
+	-- Themes
 	{ src = "https://github.com/bjarneo/pixel.nvim" },
+	{ src = "https://github.com/bluz71/vim-moonfly-colors" },
 
 	-- Native nvim lsp config
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -22,7 +23,7 @@ vim.pack.add({
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 
--- TODO: Pull lsp settings into a separate file
+-- TODO: Pull LSP settings into a separate file
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-tool-installer").setup({
@@ -112,8 +113,10 @@ vim.diagnostic.config({
 	underline = true, -- Underline the error text
 })
 
-vim.cmd.colorscheme("pixel")
+--vim.cmd.colorscheme("pixel") -- Color theme that uses ANSI colors only
+vim.cmd.colorscheme("moonfly")
 
+vim.g.mapleader = " "
 vim.o.number = true -- Enable line numbers
 vim.o.relativenumber = true -- Relative numbers
 vim.o.tabstop = 4 -- Number of spaces a tab represents
@@ -121,10 +124,18 @@ vim.o.shiftwidth = 4 -- Number of spaces for each indentation
 vim.o.expandtab = true -- Convert tabs to spaces
 vim.o.smartindent = true -- Automatically indent new lines
 vim.o.wrap = true -- Enable line wrapping
-vim.o.colorcolumn = "80"
---vim.o.cursorline = true -- Highlight the current line
+vim.o.colorcolumn = "80" -- Column limit line
+vim.o.clipboard = "unnamedplus" -- Use the system clpboard
+vim.o.cursorline = true
 
 vim.cmd("syntax on")
 vim.cmd("filetype plugin indent on")
 
-vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+vim.keymap.set(
+	"n",
+	"<leader>e",
+	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+	{ desc = "Telescope file browser" }
+)
+vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Telescope live grep" })
+--vim.keymap.set("n", "<leader>fg", ":Telescope live_grep search_dirs={'%:p:h'}<CR>", { desc = "Telescope live grep" })
