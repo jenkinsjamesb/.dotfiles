@@ -45,6 +45,12 @@
       <action name="Kill" />
     </keybind>
     
+    <keybind key="W-S-s">
+        <action name="Execute">
+            <command>sh -c 'grim -g "$(slurp)" - | swappy -f -'</command>
+        </action>
+    </keybind>
+    
   </keyboard>
 
   <mouse>
