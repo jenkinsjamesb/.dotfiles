@@ -17,8 +17,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 --buffer keybinds
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>")
-vim.keymap.set("n", "<leader>bn", ":BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
+vim.keymap.set("n", "<leader>bp", ":bprev<CR>")
 
 --allows paste without removing current buffer
 vim.keymap.set("x", "<leader>p", '"_dP')
