@@ -7,7 +7,8 @@ export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+# Export PATH extensions
 export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
 
-# If non-login and tmux installed and not attached, start/attach to tmux
-[ -z "$SSH_TTY" ] && [[ $- == *i* ]] && [[ $0 != -* ]] && [ -n $(command -v tmux) ] && [ -z "$TMUX" ] && tmux new-session -A -s main
+# Make a quick-connect tmux alias
+alias t='tmux new-session -A -s main'
