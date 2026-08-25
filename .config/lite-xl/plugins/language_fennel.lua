@@ -1,1 +1,0 @@
-lite-xl-plugins/plugins/language_fennel.lua

@@ -1,1 +1,0 @@
-lite-xl-plugins/plugins/language_ssh_config.lua

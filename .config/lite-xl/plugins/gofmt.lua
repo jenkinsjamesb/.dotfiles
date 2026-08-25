@@ -1,1 +1,0 @@
-lite-xl-plugins/plugins/gofmt.lua
