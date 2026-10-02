@@ -21,6 +21,9 @@ vim.pack.add({
 
 	-- Git info in gutter
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+
+	-- Route UI selections through a telescope picker
+	{ src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
 })
 
 require("plugin-config")

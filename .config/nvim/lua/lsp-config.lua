@@ -29,6 +29,14 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("ruff", {
+	init_options = {
+		settings = {
+			lineLength = 80,
+		},
+	},
+})
+
 vim.diagnostic.config({
 	virtual_text = true, -- Shows errors inline at the end of the line
 	signs = true, -- Shows icons in the gutter/sign column
