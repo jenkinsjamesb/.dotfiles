@@ -7,8 +7,10 @@
     "spacing": 0, // Gaps between modules
 
     "modules-left": [
-        "clock",
+        "clock#local",
+        "clock#utc",
         "battery",
+        "pulseaudio",
         "network"
     ],
 
@@ -21,10 +23,14 @@
             "unlocked": ""
         }
     },
-    "clock": {
-        // "timezone": "America/New_York",
+    "clock#local": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%Y-%m-%d %H:%M}"
+        "format": "{:%Y-%m-%d %H:%M %Z (%z)}"
+    },
+    "clock#utc": {
+        "timezone": "UTC",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M %Z}"
     },
     "battery": {
         "states": {
@@ -40,6 +46,22 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+    "format": "Volume {volume}%",
+    "format-bluetooth": "{Volume () {volume}%",
+    "format-muted": "Muted",
+    "format-icons": {
+        "headphone": "",
+        "handsfree": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
