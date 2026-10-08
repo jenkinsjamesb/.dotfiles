@@ -5,31 +5,25 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     //"height": 30, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules
-
     "modules-left": [
+        "clock#date",
         "clock#local",
         "clock#utc",
         "battery",
         "pulseaudio",
         "network"
     ],
-
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
+    "clock#date": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%a %Y-%m-%d (%g%j)}"
     },
     "clock#local": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%Y-%m-%d %H:%M %Z (%z)}"
+        "tooltip": false,
+        "format": "{:%H:%M %Z (%z)}"
     },
     "clock#utc": {
+        "tooltip": false,
         "timezone": "UTC",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H:%M %Z}"
     },
     "battery": {
@@ -42,29 +36,18 @@
         "format-full": "Battery {capacity}%",
         "format-charging": "Charging {capacity}%",
         "format-plugged": "",
-        "format-alt": "",
+        "format-alt": ""
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
     },
     "pulseaudio": {
-    "format": "Volume {volume}%",
-    "format-bluetooth": "{Volume () {volume}%",
-    "format-muted": "Muted",
-    "format-icons": {
-        "headphone": "",
-        "handsfree": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
-    },
-    "scroll-step": 1,
-    "on-click": "pavucontrol"
+        "format": "Volume {volume}%",
+        "format-bluetooth": "{Volume () {volume}%",
+        "format-muted": "Muted",
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)",
         "format-ethernet": "{ifname} {ipaddr}/{cidr}",
         "tooltip-format": "{ifname} via {gwaddr}",
