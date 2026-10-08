@@ -24,6 +24,12 @@ vim.pack.add({
 
 	-- Route UI selections through a telescope picker
 	{ src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
+
+	-- Markdown rendering
+	{ src = "https://github.com/OXY2DEV/markview.nvim" },
+
+	-- Conform for formatting
+	{ src = "https://github.com/stevearc/conform.nvim" },
 })
 
 require("plugin-config")

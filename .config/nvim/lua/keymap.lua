@@ -1,13 +1,13 @@
 vim.keymap.set(
 	"n",
 	"<leader>e",
-	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+	":Telescope file_browser path=%:p:h no_ignore=true hidden=true select_buffer=true<CR>",
 	{ desc = "Telescope file browser" }
 )
 vim.keymap.set("n", "<leader>fi", ":Telescope git_files<CR>", { desc = "Telescope Git files" })
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Telescope Diagnostics" })
+vim.keymap.set("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Telescope diagnostics" })
 --vim.keymap.set("n", "<leader>fg", ":Telescope live_grep search_dirs={'%:p:h'}<CR>", { desc = "Telescope live grep" })
 
 -- QOL
