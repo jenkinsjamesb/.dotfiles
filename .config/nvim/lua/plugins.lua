@@ -30,6 +30,9 @@ vim.pack.add({
 
 	-- Conform for formatting
 	{ src = "https://github.com/stevearc/conform.nvim" },
+
+	-- TODO comments highlighting/display
+	{ src = "https://github.com/folke/todo-comments.nvim" },
 })
 
 require("plugin-config")

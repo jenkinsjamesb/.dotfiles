@@ -49,6 +49,25 @@ require("conform").setup({
 	},
 })
 
+require("todo-comments").setup({
+	vim.keymap.set("n", "<leader>tn", function()
+		require("todo-comments").jump_next()
+	end, { desc = "Next Todo Comment" }),
+	vim.keymap.set("n", "<leader>tp", function()
+		require("todo-comments").jump_prev()
+	end, { desc = "Previous Todo Comment" }),
+	vim.keymap.set("n", "<leader>tt", "<cmd>TodoTelescope<CR>", { desc = "Open Todo List In Telescope" }),
+	keywords = {
+		TODO = { alt = { "TO-DO" } },
+	},
+	search = { pattern = [[\b(KEYWORDS)(\([^\)]*\))?:]] },
+	highlight = {
+		-- DONE(CX):https://github.com/folke/todo-comments.nvim/issues/10
+		-- SOLVED: https://github.com/folke/todo-comments.nvim/issues/332
+		pattern = [[.*<((KEYWORDS)%(\(.{-1,}\))?):]],
+	},
+})
+
 -- To get ui-select loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require("telescope").load_extension("ui-select")
