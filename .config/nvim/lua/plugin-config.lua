@@ -4,6 +4,7 @@ require("mason-tool-installer").setup({
 	ensure_installed = {
 		-- Generic
 		"prettier",
+		"harper-ls",
 
 		-- Lua
 		"lua_ls",
