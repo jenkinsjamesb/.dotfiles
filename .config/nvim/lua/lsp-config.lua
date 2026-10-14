@@ -2,6 +2,7 @@ vim.lsp.config("gopls", {
 	-- Use gofumpt for stricter formatting
 	settings = {
 		gopls = {
+			staticcheck = true,
 			gofumpt = true,
 		},
 	},
