@@ -7,10 +7,10 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>fi", ":Telescope git_files<CR>", { desc = "Telescope Git files" })
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Telescope diagnostics" })
+vim.keymap.set("n", "<leader>fd", ":Telescope diagnostics wrap_results=true line_width=full<CR>", { desc = "Telescope diagnostics" })
 --vim.keymap.set("n", "<leader>fg", ":Telescope live_grep search_dirs={'%:p:h'}<CR>", { desc = "Telescope live grep" })
 
--- QOL
+-- QoL
 --makes search terms stay in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
