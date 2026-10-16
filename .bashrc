@@ -13,5 +13,32 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
 # Make a quick-connect tmux alias
 alias t='tmux new-session -A -s main'
 
-alias gprune='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
-alias gpruneall='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
+function tnew() {
+    name="$1"
+
+    if [ -z "$name" ]; then
+        name="main"
+    fi
+
+    tmux new-session -A -s "$name"
+}
+
+function tsplit() {
+    path="$1"
+    [ -z "$path" ] && path="$PWD"
+    cd "$path" || return
+    tmux split-window -h
+    tmux split-window
+}
+
+function gprune() {
+    del="-d"
+    [ "$1" == "-f" ] || [ "$1" == "--force" ] && del="-D"
+
+    git fetch --prune
+    git branch -r |
+        awk "{print \$1}" |
+        grep -E -v -f /dev/fd/0 <(git branch -vv | grep origin) |
+        awk "{print \$1}" |
+        xargs git branch $del
+}
