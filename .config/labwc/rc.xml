@@ -25,7 +25,7 @@
       <action name="Execute" command="swaylock" />
     </keybind>
 
-    <keybind key="W-p">
+    <keybind key="W-S-n">
       <action name="Execute" command="playerctl previous" />
     </keybind>
 
