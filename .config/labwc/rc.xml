@@ -25,14 +25,6 @@
       <action name="Execute" command="swaylock" />
     </keybind>
 
-    <keybind key="W-S-n">
-      <action name="Execute" command="playerctl previous" />
-    </keybind>
-
-    <keybind key="W-n">
-      <action name="Execute" command="playerctl next" />
-    </keybind>
-
     <keybind key="W-Space">
       <action name="ShowMenu" menu="root-menu" />
     </keybind>
@@ -63,6 +55,14 @@
     <context name="All">
       <mousebind button="W-Middle" action="Press">
         <action name="Execute" command="playerctl play-pause" />
+      </mousebind>
+
+      <mousebind button="W-Side" action="Press">
+        <action name="Execute" command="playerctl previous" />
+      </mousebind>
+
+      <mousebind button="W-Extra" action="Press">
+        <action name="Execute" command="playerctl next" />
       </mousebind>
 
       <!-- Volume up on Super+ScrollUp -->
